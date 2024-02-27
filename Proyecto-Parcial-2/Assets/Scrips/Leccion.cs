@@ -7,7 +7,7 @@ using UnityEngine;
 public class Leccion 
 {
     public int ID;
-    public List<string> lessons;
+    public string lessons;
     public List<string> opciones;
     public int correctAnswer;
 
@@ -16,5 +16,9 @@ public class Leccion
 [CreateAssetMenu(fileName = "New Subject", menuName = "ScriptableObjects/NewLesson", order = 1)]
 public class Subject : ScriptableObject
 {
+    [Header("GameObject Configuration")]
+    public int Lesson = 0;
+
+    [Header("GameObject Configuration")]
     public List<Leccion> leccionList;
 }
