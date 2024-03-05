@@ -7,7 +7,7 @@ public class Leccion
 {
      public int ID;
      public string lessons;
-     public List<string> opciones;
+     public List<string> Opciones;
      public int correctAnswer;
 
 }
