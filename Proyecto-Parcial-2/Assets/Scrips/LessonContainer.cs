@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LessonContainer : MonoBehaviour
 {
@@ -12,9 +12,9 @@ public class LessonContainer : MonoBehaviour
     public int TotalLessions = 0;
     public bool AreAllLessonsComplete = false;
 
-    [Header("UI Configuration")]
+    [Header("UI Configuraction")]
     public TMP_Text StageTitle;
-    public TMP_Text LessonsStage;
+    public TMP_Text LessonStage;
 
     [Header("External GameObject Configuration")]
     public GameObject lessonContainer;
@@ -22,46 +22,48 @@ public class LessonContainer : MonoBehaviour
     [Header("Lesson Data")]
     public ScriptableObject LessonData;
 
+    // Start is called before the first frame update
     void Start()
     {
-      if (lessonContainer != null)
-      {
-        OnUpdateUI();
-      }
-      else
-      {
-        Debug.LogWarning("GameObject Nulo, revida las variables de tipo GameObject lessonContainer");
-      }
-    }
-
-    public void OnUpdateUI()
-    {
-        if (StageTitle != null || LessonsStage != null)
+        if (lessonContainer != null)
         {
-            StageTitle.text = "Leccion " + Lection;
-            LessonsStage.text = "Leccion " + CurrentLession + "de " + TotalLessions; 
+            OnUpdateUI();
         }
         else
         {
-            Debug.LogWarning("GameObject nulo, revisa las variables de tipo TMP_Text");
+            Debug.LogWarning("GameObject Nulo, revisa las variables de tipo GameObjec lessonContainer");
+        }
+        
+    }
+
+
+    public void OnUpdateUI()
+    {
+        if (StageTitle != null || LessonStage != null)
+        {
+            StageTitle.text = "Leccion " + Lection;
+            LessonStage.text = "Leccion " + CurrentLession + " de" + TotalLessions;
+        }
+        else
+        {
+            Debug.LogWarning("GameObject Nulo, revisa las variables de tipo TMP_Text");
         }
     }
 
-    //Este metodo activa/desactiva la venta de lessonContainer 
+    //Este método activa/desactiva la ventana de lessonContainer
 
     public void EnableWindow()
     {
-        OnUpdateUI();
-
         if (lessonContainer.activeSelf)
         {
-            // Desactiva el objeto si esta activo
+            //Desactiva el Objeto si está activo
             lessonContainer.SetActive(false);
         }
         else
         {
-            // Activa el objeto si esta desactivado
+            //Active el objeto si está desactivado
             lessonContainer.SetActive(true);
         }
     }
+
 }

@@ -12,44 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Seccion1_Leccion1
   m_EditorClassIdentifier: Assembly-CSharp::Subject
-  leccionList:
-  - ID: 0
-    lessons:
-    - "\xBFQue es una variable?"
-    opciones:
-    - ID
-    - Lista
-    - Simbolo
-    - Tipo
-    - Contenedor
-    correctAnswer: 4
-  - ID: 1
-    lessons:
-    - "\xBFQue es una funcion?"
-    opciones:
-    - Variable
-    - Proceso
-    - Clase
-    - Recurso
-    - Script
-    correctAnswer: 1
-  - ID: 1
-    lessons:
-    - "\xBFQue es una programa?"
-    opciones:
-    - Una funcion
-    - Una clase
-    - Un recurso
-    - Un conjunto de algoritmos
-    - Una serie de tv
-    correctAnswer: 3
-  - ID: 1
-    lessons:
-    - "\xBFQue es un algoritmo?"
-    opciones:
-    - Una serue de pasos para resolver un problema
-    - Es una varaible
-    - Una funcion
-    - Un programa
-    - Un script
-    correctAnswer: 0
+  lesson: 0
+  leccionList: []
